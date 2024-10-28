@@ -10,7 +10,7 @@ func init() {
 }
 
 func RandomInt(min, max int64) int64 {
-	return rand.Int63n(max - min + 1) + min
+	return rand.Int63n(max-min+1) + min
 }
 
 func RandomString(n int) string {
@@ -31,7 +31,11 @@ func RandomMoney() int64 {
 }
 
 func RandomCurrency() string {
-	currencies := []string{"USD", "EUR", "KZT"}
+	currencies := []string{USD, EUR, KZT}
 	n := len(currencies)
 	return currencies[rand.Intn(n)]
+}
+
+func RandomEmail() string {
+	return RandomString(6) + "@gmail.com"
 }

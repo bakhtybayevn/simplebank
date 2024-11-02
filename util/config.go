@@ -9,11 +9,12 @@ import (
 // Config stores the all configuration of our application
 // The values are read by the viper package from a config file or environment variables
 type Config struct {
-	DBDriver           string        `mapstructure:"DB_DRIVER"`
-	DBSource           string        `mapstructure:"DB_SOURCE"`
-	ServerAddress      string        `mapstructure:"SERVER_ADDRESS"`
-	TokenSymmetricKey  string        `mapstructure:"TOKEN_SYMMETRIC_KEY"`
-	AcessTokenDuration time.Duration `mapstructure:"ACCESS_TOKEN_DURATION"`
+	DBDriver             string        `mapstructure:"DB_DRIVER"`
+	DBSource             string        `mapstructure:"DB_SOURCE"`
+	ServerAddress        string        `mapstructure:"SERVER_ADDRESS"`
+	TokenSymmetricKey    string        `mapstructure:"TOKEN_SYMMETRIC_KEY"`
+	AcessTokenDuration   time.Duration `mapstructure:"ACCESS_TOKEN_DURATION"`
+	RefreshTokenDuration time.Duration `mapstructure:"REFRESH_TOKEN_DURATION"`
 }
 
 // LoadConfig reads configuration from file or environment variables
